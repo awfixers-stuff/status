@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "@openstatus/ui/globals";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+/* safelist */
+@source inline("has-data-[slot=slider-range]:bg-red-500");
+
+@theme {
+  --breakpoint-xs: 30rem;
+}
+
+@theme inline {
+  --font-cal: var(--font-cal-sans);
+  --font-commit-mono: var(--font-commit-mono);
+  --font-sans: var(--font-inter);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

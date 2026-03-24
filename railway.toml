@@ -1,0 +1,49 @@
+[railway]
+  entrypoint = "dashboard"
+
+[dashboard]
+  dockerfile = "apps/dashboard/Dockerfile"
+  path = "."
+  port = 3000
+  healthcheckPath = "/"
+  healthcheckTimeout = 45
+  restart = "always"
+
+  [dashboard.variables]
+    NODE_ENV = "production"
+    NEXT_PUBLIC_APP_URL = "https://dashboard.${RAILWAY_PUBLIC_DOMAIN}"
+    NEXT_PUBLIC_URL = "https://dashboard.${RAILWAY_PUBLIC_DOMAIN}"
+    DATABASE_URL = "${DATABASE_URL}"
+    DATABASE_AUTH_TOKEN = "${DATABASE_AUTH_TOKEN}"
+    SELF_HOST = "true"
+    NEXT_PUBLIC_SERVER_URL = "https://api.${RAILWAY_PUBLIC_DOMAIN}"
+
+[server]
+  dockerfile = "apps/server/Dockerfile"
+  path = "."
+  port = 3000
+  healthcheckPath = "/ping"
+  healthcheckTimeout = 30
+  restart = "always"
+
+  [server.variables]
+    NODE_ENV = "production"
+    DATABASE_URL = "${DATABASE_URL}"
+    DATABASE_AUTH_TOKEN = "${DATABASE_AUTH_TOKEN}"
+    PORT = "3000"
+
+[status-page]
+  dockerfile = "apps/status-page/Dockerfile"
+  path = "."
+  port = 3000
+  healthcheckPath = "/"
+  healthcheckTimeout = 45
+  restart = "always"
+
+  [status-page.variables]
+    NODE_ENV = "production"
+    NEXT_PUBLIC_APP_URL = "https://status.${RAILWAY_PUBLIC_DOMAIN}"
+    NEXT_PUBLIC_URL = "https://status.${RAILWAY_PUBLIC_DOMAIN}"
+    DATABASE_URL = "${DATABASE_URL}"
+    DATABASE_AUTH_TOKEN = "${DATABASE_AUTH_TOKEN}"
+    SELF_HOST = "true"
