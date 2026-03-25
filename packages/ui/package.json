@@ -38,7 +38,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@openstatus/tsconfig": "workspace:*",
-    "@types/luxon": "3.4.2",
+    "@types/luxon": "3.7.1",
     "@types/node": "22.10.2",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
@@ -81,7 +81,7 @@
     "cmdk": "1.1.1",
     "date-fns": "3.6.0",
     "lucide-react": "0.525.0",
-    "luxon": "3.5.0",
+    "luxon": "3.7.2",
     "next": "16.1.6",
     "qr-code-styling": "1.9.2",
     "radix-ui": "1.4.3",
