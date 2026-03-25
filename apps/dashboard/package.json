@@ -10,7 +10,7 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
-    "@auth/core": "0.40.0",
+    "@auth/core": "0.41.1",
     "@auth/drizzle-adapter": "1.10.0",
     "@date-fns/tz": "1.2.0",
     "@date-fns/utc": "2.1.0",
