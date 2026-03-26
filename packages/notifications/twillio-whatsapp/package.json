@@ -10,7 +10,7 @@
     "@openstatus/db": "workspace:*",
     "@openstatus/notification-base": "workspace:*",
     "@t3-oss/env-core": "0.13.10",
-    "validator": "13.12.0",
+    "validator": "13.15.22",
     "zod": "4.1.13"
   },
   "devDependencies": {
